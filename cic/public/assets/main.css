@@ -1,0 +1,67 @@
+.scrolling-row {
+  overflow: hidden;
+  width: 100%;
+}
+
+.scrolling-images {
+  display: flex;
+  gap: 1rem;
+  animation: scroll-left 25s linear infinite;
+}
+
+.scrolling-images:hover {
+  animation-play-state: paused;
+}
+
+.scroll-item {
+  position: relative;
+  flex: 0 0 auto;
+}
+
+.scroll-item img {
+  height: 200px; /* adjust for your design */
+  width: auto;
+  border-radius: 10px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.2);
+  display: block;
+}
+
+/* Caption overlay */
+.scroll-item .caption {
+  position: absolute;
+  bottom: 8px;
+  left: 50%;
+  transform: translateX(-50%);
+  background: rgba(0,0,0,0.6);
+  color: #fff;
+  padding: 4px 8px;
+  border-radius: 4px;
+  font-size: 0.85rem;
+  text-align: center;
+}
+
+/* Scrolling animation */
+@keyframes scroll-left {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-50%);
+  }
+}
+
+/* Responsive height */
+@media (max-width: 768px) {
+  .scroll-item img {
+    height: 150px;
+  }
+}
+
+@media (max-width: 576px) {
+  .scroll-item img {
+    height: 120px;
+  }
+}.form-label::after {
+    content: " *";
+    color: red;
+}
